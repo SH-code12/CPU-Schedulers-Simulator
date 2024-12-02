@@ -27,8 +27,5 @@ This is a Java-based CPU scheduling simulator implementing the following algorit
 ## Outputs
 - Execution order of processes.
 - Waiting time, turnaround time, and averages.
-- BONUS: Gantt chart visualization.
+- BONUS: Gantt GUI visualization.
 
-## Team Info
-- Submission deadline: 6th December 2024.
-- Team size: Up to 5 members.
