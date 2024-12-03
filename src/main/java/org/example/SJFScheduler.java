@@ -1,96 +1,81 @@
 package org.example;
+
 import java.util.*;
 
+public class SJFScheduler implements Scheduler {
 
-public class SJFScheduler {
+    private List<Process> processes;
+    private List<String> executionOrder;
 
-    // Inner class to represent a process
-    static class Process {
-        String name;
-        int arrivalTime;
-        int burstTime;
-        int waitingTime;
-        int turnaroundTime;
-        int age; // Tracks how long the process has been waiting
-
-        Process(String name, int arrivalTime, int burstTime) {
-            this.name = name;
-            this.arrivalTime = arrivalTime;
-            this.burstTime = burstTime;
-            this.waitingTime = 0;
-            this.turnaroundTime = 0;
-            this.age = 0; // Initially, age is zero
-        }
+    public SJFScheduler(List<Process> processes) {
+        this.processes = processes;
+        this.executionOrder = new ArrayList<>();
     }
 
-    // Method to schedule processes using SJF with aging to resolve starvation
-    public void schedule(List<Process> processes) {
-        processes.sort(Comparator.comparingInt(p -> p.arrivalTime)); // Sort by arrival time
+    // Method to schedule processes using SJF with aging
+    @Override
+    public void schedule() {
+        processes.sort(Comparator.comparingInt(p -> p.arrivalTime));
         int currentTime = 0;
-        List<Process> readyQueue = new ArrayList<>();
+        PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(p -> p.burstTime));
+        // To track processes that have arrived
+        int index = 0;
 
-        while (!processes.isEmpty() || !readyQueue.isEmpty()) {
-            // Move processes to the ready queue if they have arrived
-            for (Iterator<Process> iterator = processes.iterator(); iterator.hasNext(); ) {
-                Process p = iterator.next();
-                if (p.arrivalTime <= currentTime) {
-                    readyQueue.add(p);
-                    iterator.remove();
-                }
+        while (!readyQueue.isEmpty() || index < processes.size()) {
+            // Add all processes that have arrived by currentTime to the readyQueue
+            while (index < processes.size() && processes.get(index).arrivalTime <= currentTime) {
+                readyQueue.add(processes.get(index));
+                index++;
             }
 
+            // If the ready queue is empty, move the current time to the next process's arrival time
             if (readyQueue.isEmpty()) {
-                currentTime++;
+                currentTime = processes.get(index).arrivalTime;
                 continue;
             }
 
-            // Apply aging: increment the age of processes in the ready queue
-            for (Process p : readyQueue) {
-                p.age++;
+            // Pick the process with the shortest burst time
+            Process currentProcess = readyQueue.poll();
+
+            // Execute the selected process
+            int startTime = Math.max(currentTime, currentProcess.arrivalTime);
+            currentProcess.waitingTime = startTime - currentProcess.arrivalTime;
+            currentProcess.turnaroundTime = currentProcess.waitingTime + currentProcess.burstTime;
+            currentTime = startTime + currentProcess.burstTime;
+
+            // Record the execution order
+            for (int i = 0; i < currentProcess.burstTime; i++) {
+                executionOrder.add(currentProcess.name);
             }
 
-            // Select process with the shortest burst time and resolve starvation via aging
-            readyQueue.sort(Comparator.comparingInt((Process p) -> p.burstTime)
-                    .thenComparingInt(p -> p.age)); // Use age as a tie-breaker
-
-            Process selectedProcess = readyQueue.get(0); // Get the process to execute
-            currentTime += selectedProcess.burstTime;
-            selectedProcess.waitingTime = currentTime - selectedProcess.arrivalTime - selectedProcess.burstTime;
-            selectedProcess.turnaroundTime = selectedProcess.waitingTime + selectedProcess.burstTime;
-
-            printProcess(selectedProcess);
-            readyQueue.remove(selectedProcess);
+            // Apply aging to remaining processes in the readyQueue
+            List<Process> agedProcesses = new ArrayList<>();
+            while (!readyQueue.isEmpty()) {
+                Process p = readyQueue.poll();
+                // Increase the priority of the process that has been in the ready queue
+                // Aging: Reduce burst time by 1, minimum burst time is 1
+                p.burstTime = Math.max(1, p.burstTime - 1);
+                agedProcesses.add(p);
+            }
+            // Re-add aged processes to the ready queue
+            readyQueue.addAll(agedProcesses);
         }
     }
 
     // Method to print results for each process
-    private void printProcess(Process p) {
-        System.out.printf("Process: %s | Arrival: %d | Burst: %d | Waiting: %d | Turnaround: %d%n",
-                p.name, p.arrivalTime, p.burstTime, p.waitingTime, p.turnaroundTime);
-    }
+    @Override
+    public void Display() {
+        System.out.println("Execution Order: " + String.join(" -> ", executionOrder));
+        double totalWaitingTime = 0;
+        double totalTurnaroundTime = 0;
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Process> processes = new ArrayList<>();
-
-        System.out.print("Enter the number of processes: ");
-        int n = scanner.nextInt();
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter details for process " + (i + 1));
-            System.out.print("Name: ");
-            String name = scanner.next();
-            System.out.print("Arrival Time: ");
-            int arrivalTime = scanner.nextInt();
-            System.out.print("Burst Time: ");
-            int burstTime = scanner.nextInt();
-
-            processes.add(new Process(name, arrivalTime, burstTime));
+        for (Process p : processes) {
+            totalWaitingTime += p.waitingTime;
+            totalTurnaroundTime += p.turnaroundTime;
+            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + ", Turnaround Time = " + p.turnaroundTime);
         }
 
-        SJFScheduler scheduler = new SJFScheduler();
-        scheduler.schedule(processes);
-
-        scanner.close();
+        System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
+        System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
     }
 }
