@@ -21,4 +21,7 @@ public class Process {
         this.priority = priority;
         this.remainingTime = burstTime;
     }
+        public void calculateFCAIFactor(double V1, double V2) {
+        fcaiFactor = (10 - priority) + (arrivalTime / V1) + (remainingTime / V2);
+
 }
