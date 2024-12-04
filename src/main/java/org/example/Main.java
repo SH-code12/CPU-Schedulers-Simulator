@@ -22,16 +22,13 @@ public class Main {
             processes.add(new Process(name, arrivalTime, burstTime, priority));
         }
 
-        System.out.println("Choose Scheduling Algorithm:");
-        System.out.println("1. Non-Preemptive Priority Scheduling");
-        System.out.println("2. Non-Preemptive SJF Scheduling");
-        System.out.println("3. SRTF(Preemptive SJF) Scheduling");
-        System.out.println("4. FCAI Scheduling");
-        System.out.println("5. Exit");
-
+        System.out.println("Choose Scheduling Algorithm:\n"
+                + "1. Non-Preemptive Priority Scheduling\n"
+                + "2. Non-Preemptive SJF Scheduling\n"
+                + "3. SRTF(Preemptive SJF) Scheduling\n"
+                + "4. FCAI Scheduling\n"
+                + "5. Exit\n");
         int choice = scanner.nextInt();
-
-
         switch (choice) {
             case 1:
                 Scheduler PriorityScheduler = new NonPreemptivePriorityScheduler(processes);

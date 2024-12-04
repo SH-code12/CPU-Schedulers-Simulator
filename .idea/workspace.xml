@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FCAIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FCAIScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NonPreemptivePriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NonPreemptivePriorityScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SJFScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Scheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <updated>1733166133737</updated>
       <workItem from="1733166134766" duration="750000" />
       <workItem from="1733166976774" duration="962000" />
-      <workItem from="1733182437059" duration="12529000" />
+      <workItem from="1733182437059" duration="13640000" />
+      <workItem from="1733319906894" duration="1156000" />
     </task>
     <servers />
   </component>

@@ -80,6 +80,7 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
         // Print the average waiting time and turnaround time
         System.out.println("Average Waiting Time: " + (totalWaitingTime / originalProcesses.size()));
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / originalProcesses.size()));
+
     }
 }
 
