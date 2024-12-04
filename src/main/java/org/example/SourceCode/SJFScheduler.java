@@ -1,4 +1,4 @@
-package org.example;
+package org.example.SourceCode;
 
 import java.util.*;
 
@@ -72,7 +72,7 @@ public class SJFScheduler implements Scheduler {
         for (Process p : processes) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + ", Turnaround Time = " + p.turnaroundTime);
+            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + "\nTurnaround Time = " + p.turnaroundTime);
         }
 
         System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));

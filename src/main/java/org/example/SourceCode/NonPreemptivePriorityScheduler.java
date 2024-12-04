@@ -1,4 +1,4 @@
-package org.example;
+package org.example.SourceCode;
 import java.util.*;
 
 public class NonPreemptivePriorityScheduler implements Scheduler {
@@ -74,7 +74,7 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
         for (Process p : originalProcesses) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + ", Turnaround Time = " + p.turnaroundTime);
+            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + "\nTurnaround Time = " + p.turnaroundTime);
         }
 
         // Print the average waiting time and turnaround time

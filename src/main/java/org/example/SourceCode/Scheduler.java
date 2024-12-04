@@ -1,4 +1,4 @@
-package org.example;
+package org.example.SourceCode;
 import java.util.*;
 
 public interface Scheduler {
