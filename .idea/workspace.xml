@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Processform.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
+    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="gui starts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "390",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "417",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -63,7 +65,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Processform">
+  <component name="RunManager" selected="Application.GUIScheduler">
     <configuration name="GUIScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUIScheduler" />
       <module name="CPU" />
@@ -93,8 +95,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Processform" />
         <item itemvalue="Application.GUIScheduler" />
+        <item itemvalue="Application.Processform" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -118,11 +120,24 @@
       <workItem from="1733166976774" duration="962000" />
       <workItem from="1733182437059" duration="13640000" />
       <workItem from="1733319906894" duration="2962000" />
-      <workItem from="1733381637706" duration="9868000" />
+      <workItem from="1733381637706" duration="16662000" />
     </task>
+    <task id="LOCAL-00001" summary="gui starts">
+      <option name="closed" value="true" />
+      <created>1733427166629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733427166630</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gui starts" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui starts" />
   </component>
 </project>

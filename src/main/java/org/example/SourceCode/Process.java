@@ -14,12 +14,25 @@ public class Process {
     int quantum = 0;
     double fcaiFactor = 0.0;
 
-    Process(String name, int arrivalTime, int burstTime, int priority) {
+    public Process(String name, int arrivalTime, int burstTime, int priority) {
         this.name = name;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
         this.priority = priority;
         this.remainingTime = burstTime;
+    }
+
+    public void setname(String n){
+        this.name = n;
+    }
+    public void setArrivalTime(int ar){
+        this.arrivalTime = ar;
+    }
+    public void setBurstTime(int br){
+        this.burstTime = br;
+    }
+    public void setPriority(int pr){
+        this.priority= pr;
     }
         public void calculateFCAIFactor(double V1, double V2) {
             fcaiFactor = (10 - priority) + (arrivalTime / V1) + (remainingTime / V2);
