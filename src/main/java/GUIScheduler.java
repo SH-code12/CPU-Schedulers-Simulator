@@ -35,17 +35,20 @@ public class GUIScheduler extends JFrame {
                 int noOfP = Integer.parseInt(noOfProcesses);
                 List<Process> li = new ArrayList<>();
                 for(int i = 0;i<noOfP;i++) {
-                    Process member  = new Process("",0,0,0);
-                    Processform pr1 = new Processform(member);
+                    Process member = new Process();
+                        Processform pr1 = new Processform(member, i + 1);
+                    li.add(member);
+                    System.out.println(member.name + "ll");
 
                 }
+
+
             }
         });
     }
 
     public static void main(String[]args){
         new GUIScheduler();
-
     }
 
 

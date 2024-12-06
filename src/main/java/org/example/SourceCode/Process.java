@@ -2,7 +2,7 @@ package org.example.SourceCode;
 
 public class Process {
 
-    String name;
+    public String name;
     // for GUI
     String color;
     int arrivalTime;
@@ -20,6 +20,12 @@ public class Process {
         this.burstTime = burstTime;
         this.priority = priority;
         this.remainingTime = burstTime;
+    }   public Process() {
+        this.name = "";
+        this.arrivalTime = 0;
+        this.burstTime = 0;
+        this.priority = 0;
+        this.remainingTime = 0;
     }
 
     public void setname(String n){
