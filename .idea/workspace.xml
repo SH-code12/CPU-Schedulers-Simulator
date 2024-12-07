@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI input forms done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "417",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -64,7 +67,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.GUIScheduler">
+  <component name="RunManager">
     <configuration name="GUIScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUIScheduler" />
       <module name="CPU" />
@@ -103,7 +106,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -120,6 +124,7 @@
       <workItem from="1733182437059" duration="13640000" />
       <workItem from="1733319906894" duration="2962000" />
       <workItem from="1733381637706" duration="20966000" />
+      <workItem from="1733600358427" duration="8419000" />
     </task>
     <task id="LOCAL-00001" summary="gui starts">
       <option name="closed" value="true" />
