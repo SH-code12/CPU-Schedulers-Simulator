@@ -1,6 +1,8 @@
 package org.example.SourceCode;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,13 +15,15 @@ public class Main {
         for (int i = 0; i < numProcesses; i++) {
             System.out.print("Enter Name of Process " + (i + 1) + ": ");
             String name = scanner.next();
+            System.out.print("Enter Color of Process " + (i + 1) + ": ");
+            Color color = Color.decode(scanner.next());
             System.out.print("Enter Arrival Time of Process " + (i + 1) + ": ");
             int arrivalTime = scanner.nextInt();
             System.out.print("Enter Burst Time of Process " + (i + 1) + ": ");
             int burstTime = scanner.nextInt();
             System.out.print("Enter Priority of Process " +  (i + 1) + " (Low number has high Priority) " + ": ");
             int priority = scanner.nextInt();
-            processes.add(new Process(name, arrivalTime, burstTime, priority));
+            processes.add(new Process(name, arrivalTime, burstTime, priority , color));
         }
 
         System.out.println("Choose Scheduling Algorithm:\n"

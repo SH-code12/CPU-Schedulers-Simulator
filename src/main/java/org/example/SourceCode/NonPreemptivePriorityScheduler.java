@@ -82,5 +82,10 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / originalProcesses.size()));
 
     }
+
+    @Override
+    public String[] getExecutionOrder() {
+        return executionOrder.toArray(new String[0]);
+    }
 }
 

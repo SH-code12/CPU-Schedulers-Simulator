@@ -8,4 +8,5 @@ public interface Scheduler {
     void Display();
 
 
+    String[] getExecutionOrder();
 }

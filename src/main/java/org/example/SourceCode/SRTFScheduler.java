@@ -73,4 +73,8 @@ public class SRTFScheduler implements Scheduler {
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
 
     }
+    @Override
+    public String[] getExecutionOrder() {
+        return executionOrder.toArray(new String[0]);
+    }
 }
