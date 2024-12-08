@@ -60,7 +60,6 @@ public class GUIScheduler extends JFrame {
             NonPreemptivePriorityScheduler proces1 = new NonPreemptivePriorityScheduler(li,Integer.parseInt(textField3.getText()));
             proces1.schedule();
 
-            System.out.println("schdule arrived ");
             Presentation Mypresesntation = new Presentation(proces1.executionOrder,this);
             Mypresesntation.setVisible(true);
 
@@ -78,10 +77,12 @@ public class GUIScheduler extends JFrame {
         }
         else if(comboBox1.getSelectedIndex()==2){
 // shortest remaining time first
+            System.out.println("schdule arrived ");
+
             SRTFScheduler proces3 = new SRTFScheduler(li,Integer.parseInt(textField3.getText()));
             proces3.schedule();
 
-
+for(String s: proces3.executionOrder)System.out.println(s+" ");
             Presentation Mypresesntation = new Presentation(proces3.executionOrder,this);
             Mypresesntation.setVisible(true);
         }
