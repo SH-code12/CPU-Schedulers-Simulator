@@ -37,10 +37,18 @@ public class GUIScheduler extends JFrame {
                 System.out.println();
                 System.out.println(noOfProcesses);
                 int noOfP = Integer.parseInt(noOfProcesses);
-                List<Process> li = new ArrayList<>();
+                if(comboBox1.getSelectedIndex()!=3) {
+                    List<Process> li = new ArrayList<>();
 
                     Process member = new Process();
-                        Processform pr1 = new Processform(member,  1, noOfP,li,GUIScheduler.this);
+                    Processform pr1 = new Processform(member, 1, noOfP, li, GUIScheduler.this);
+                }
+                else{
+                    List<fcai_process> li = new ArrayList<>();
+
+                    fcai_process member = new fcai_process();
+                    fcaiform pr1 = new fcaiform(member, 1, noOfP, li, GUIScheduler.this);
+                }
 
                         dispose();
 
@@ -86,11 +94,31 @@ public class GUIScheduler extends JFrame {
             Presentation Mypresesntation = new Presentation(proces3.executionOrder, this);
             Mypresesntation.setVisible(true);
         }
-        else{
-// fcai scheduleing
 
-
+    }
+    public void run(List<fcai_process>prcs,boolean f){
+        System.out.println("schdule arrived ");
+        double v1 = prcs.get(prcs.size() - 1).arrivalTime / 10.0;
+        System.out.println("v1 is " + v1);
+        double v2 = 0;
+        for (fcai_process x : prcs) {
+            v2 = Math.max(v2, (double) x.burstTime);
         }
+        v2 /= 10.0;
+        System.out.println("v2 is " + v2);
+
+        // Calculate fcai for each process
+        for (fcai_process x : prcs) {
+            double num = (10 - x.priority) + ((double) x.arrivalTime / v1) + ((double) x.remainingTime / v2);
+            x.fcai = (int) Math.ceil(num);
+            System.out.println("FCAI Factor for " + x.name + " = " + x.fcai);
+        }
+
+        FCAI proces3 = new FCAI(prcs, v1,v2);
+        proces3.schedule();
+
+        Presentation Mypresesntation = new Presentation(proces3.resault, this);
+        Mypresesntation.setVisible(true);
     }
 
     public static void main(String[]args){

@@ -1,23 +1,25 @@
 package org.example.SourceCode;
 import java.util.*;
 
-class FCAI {
+public class  FCAI {
     private double v1, v2;
     private List<fcai_process> processes;
+    public List<String> resault ;
     private List<String>quantumHistory;
 
-    FCAI(List<fcai_process> procs, double vo, double vt) {
+    public FCAI(List<fcai_process> procs, double vo, double vt) {
         processes = procs;
         v1 = vo;
         v2 = vt;
         quantumHistory = new ArrayList<>();
     }
 
-    void schedule() {
+    public void schedule() {
         fcai_process p1 = processes.remove(0);
         int currentTime = p1.arrivalTime;
         boolean run = false;
         // for output
+        resault = new ArrayList<>();
         Map<String, Integer> waitingTime = new HashMap<>();
         Map<String, Integer> turnaroundTime = new HashMap<>();
         List<String> executionOrder = new ArrayList<>();
@@ -41,6 +43,7 @@ class FCAI {
                     waitingTime.put(p1.name, turnaroundTime.get(p1.name) - p1.burstTime);
 
                     System.out.println("=====================================");
+                   resault.add(p1.name);
                     System.out.println(p1.name + " executes for " + p1.q + " units of time");
                     System.out.println(p1.name + " completed");
                     System.out.println("Current time is " + currentTime);
@@ -57,6 +60,7 @@ class FCAI {
                     }
                 } else if (p1.q == p1.quantum) {
                     System.out.println("=====================================");
+                  resault.add(p1.name);
                     System.out.println(p1.name + " executes for " + p1.q + " units of time");
                     System.out.println("Remaining time is " + p1.remainingTime);
                     System.out.println("Current time is " + currentTime);
@@ -125,6 +129,7 @@ class FCAI {
                     p1.quantum += unused;
                     double num = (10 - p1.priority) + ((double) p1.arrivalTime / v1) + ((double) p1.remainingTime / v2);
                     p1.fcai = (int) Math.ceil(num);
+                    resault.add(p1.name);
                     System.out.println(p1.name + " executes for " + p1.q + " units of time");
                     System.out.println("Remaining time is " + p1.remainingTime);
                     System.out.println("Current time is " + currentTime);

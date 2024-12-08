@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import org.example.SourceCode.*;
 
 import org.example.SourceCode.Process;
 
@@ -12,7 +11,6 @@ import java.util.List;
 public class Processform extends JFrame {
     private JPanel processpanel;
     private JButton button1;
-    private JTextField color;
 
 
     private JTextField arriveTime;
@@ -43,8 +41,7 @@ public class Processform extends JFrame {
                     p.setname(name.getText());
                     System.out.println(name.getText());
 
-                    p.color =c;
-                    g.mapOfColors.put(p.name,p.color);
+                    g.mapOfColors.put(p.name,c);
                     p.setArrivalTime(Integer.parseInt(arriveTime.getText()));
                     p.setBurstTime(Integer.parseInt(burstTime.getText()));
                     p.remainingTime = Integer.parseInt(burstTime.getText());
