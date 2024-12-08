@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="some error in forms">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Presentation.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Presentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI worked successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Scheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/FCAIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/FCAIScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Scheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Scheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +142,7 @@
       <workItem from="1733482632252" duration="846000" />
       <workItem from="1733508732245" duration="12668000" />
       <workItem from="1733553798546" duration="649000" />
-      <workItem from="1733590303502" duration="5287000" />
+      <workItem from="1733590303502" duration="7271000" />
     </task>
     <task id="LOCAL-00001" summary="gui starts">
       <option name="closed" value="true" />
@@ -185,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733444422117</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GUI worked successfully">
+      <option name="closed" value="true" />
+      <created>1733616274659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733616274659</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +197,8 @@
     <MESSAGE value="gui starts" />
     <MESSAGE value="GUI input forms done" />
     <MESSAGE value="some error in forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="some error in forms" />
+    <MESSAGE value="GUI worked successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI worked successfully" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

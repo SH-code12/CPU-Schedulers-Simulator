@@ -11,12 +11,13 @@ public class Presentation extends JDialog {
     private JScrollPane screen;
 
     public Presentation(List<String> processes, GUIScheduler g) {
+        // p1 p1 p2 p1
         // Initialize components
         contentPane = new JPanel();
         contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS)); // Vertical layout for processes
 
-        buttonOK = new JButton("OK");
-        buttonCancel = new JButton("Cancel");
+            buttonOK = new JButton("OK");
+            buttonCancel = new JButton("Cancel");
 
         // Create a panel to hold all process components
         JPanel processPanel = new JPanel();
