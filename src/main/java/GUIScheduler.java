@@ -2,16 +2,19 @@ import org.example.SourceCode.*;
 import org.example.SourceCode.Process;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
+import java.util.List;
 
 public class GUIScheduler extends JFrame {
     private JLabel jsFirstName;
     private JPanel Jpanel;
     private JComboBox comboBox1;
+    Map<String, Color> mapOfColors = new HashMap<>();
     private JButton startButton;
     private JTextField textField1;
     private JTextField textField2;
@@ -20,8 +23,9 @@ public class GUIScheduler extends JFrame {
     public GUIScheduler(){
         setContentPane(Jpanel);
         setTitle("CPU Scheduler");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(500,500);
+        setLocationRelativeTo(null);
 
         setVisible(true);
 
@@ -34,17 +38,43 @@ public class GUIScheduler extends JFrame {
                 System.out.println(noOfProcesses);
                 int noOfP = Integer.parseInt(noOfProcesses);
                 List<Process> li = new ArrayList<>();
-                for(int i = 0;i<noOfP;i++) {
-                    Process member = new Process();
-                        Processform pr1 = new Processform(member, i + 1);
-                    li.add(member);
-                    System.out.println(member.name + "ll");
 
-                }
+                    Process member = new Process();
+                        Processform pr1 = new Processform(member,  1, noOfP,li,GUIScheduler.this);
+
+                        dispose();
+
+
+
 
 
             }
         });
+    }
+
+
+    public void run(List<Process>li){
+        System.out.println("run arrived");
+        if(comboBox1.getSelectedIndex()==0){
+
+            NonPreemptivePriorityScheduler proces1 = new NonPreemptivePriorityScheduler(li);
+            proces1.schedule();
+
+            System.out.println("schdule arrived ");
+            Presentation Mypresesntation = new Presentation(proces1.executionOrder,this);
+            Mypresesntation.setVisible(true);
+
+
+        }
+        else if(comboBox1.getSelectedIndex()==1){
+
+        }
+        else if(comboBox1.getSelectedIndex()==2){
+
+        }
+        else{
+
+        }
     }
 
     public static void main(String[]args){

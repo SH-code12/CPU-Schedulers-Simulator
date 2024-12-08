@@ -33,7 +33,7 @@ public class Main {
             case 1:
                 Scheduler PriorityScheduler = new NonPreemptivePriorityScheduler(processes);
                 PriorityScheduler.schedule();
-                PriorityScheduler.Display();
+                System.out.println(PriorityScheduler.Display());
                 break;
             case 2:
                 Scheduler SJFScheduler = new SJFScheduler(processes);

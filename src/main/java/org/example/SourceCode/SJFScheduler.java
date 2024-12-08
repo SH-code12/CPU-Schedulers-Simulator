@@ -64,7 +64,7 @@ public class SJFScheduler implements Scheduler {
 
     // Method to print results for each process
     @Override
-    public void Display() {
+    public String Display() {
         System.out.println("Execution Order: " + String.join(" -> ", executionOrder));
         double totalWaitingTime = 0;
         double totalTurnaroundTime = 0;
@@ -77,5 +77,6 @@ public class SJFScheduler implements Scheduler {
 
         System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
+        return "";
     }
 }

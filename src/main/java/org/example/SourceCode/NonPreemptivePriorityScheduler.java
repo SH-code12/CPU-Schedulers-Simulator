@@ -3,7 +3,7 @@ import java.util.*;
 
 public class NonPreemptivePriorityScheduler implements Scheduler {
     private List<Process> processes;
-    private List<String> executionOrder;
+    public List<String> executionOrder;
     // Keep track of completed processes
     private List<Process> completedProcesses;
     // Preserve the original list for calculation
@@ -63,9 +63,10 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
     }
 
     @Override
-    public void Display() {
+    public String Display() {
         // Print execution order
-        System.out.println("Execution Order: " + String.join(" -> ", executionOrder));
+        String output  ="";
+        output += "Execution Order: " + String.join(" -> ", executionOrder);
 
         // Calculate total waiting and turnaround times
         double totalWaitingTime = 0;
@@ -74,12 +75,13 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
         for (Process p : originalProcesses) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + "\nTurnaround Time = " + p.turnaroundTime);
+            output += p.name + ": Waiting Time = " + p.waitingTime + "\nTurnaround Time = " + p.turnaroundTime;
         }
 
         // Print the average waiting time and turnaround time
-        System.out.println("Average Waiting Time: " + (totalWaitingTime / originalProcesses.size()));
-        System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / originalProcesses.size()));
+        output += "Average Waiting Time: " + (totalWaitingTime / originalProcesses.size());
+        output+= "Average Turnaround Time: " + (totalTurnaroundTime / originalProcesses.size());
+        return output;
 
     }
 }
