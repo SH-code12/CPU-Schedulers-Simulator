@@ -30,16 +30,16 @@ public class FCAIScheduler implements Scheduler {
     }
 
     private void initializeQuantum(Process p) {
+        // If the quantum is zero, calculate it and add to quantumHistory
         if (p.quantum == 0) {
-            p.quantum = Math.max(2, (10 - p.priority) / 2);
-            quantumHistory.putIfAbsent(p.name, new ArrayList<>());
-            quantumHistory.get(p.name).add(p.quantum);
+            p.quantum = Math.max(2, (10 - p.priority) / 2); // Adjust quantum based on priority
+            quantumHistory.putIfAbsent(p.name, new ArrayList<>()); // Ensure list is initialized
         }
     }
 
     @Override
     public void schedule() {
-        processes.sort(Comparator.comparingInt(p -> p.arrivalTime));
+        processes.sort(Comparator.comparingInt(p -> p.arrivalTime)); // Sort processes by arrival time
         int currentTime = 0;
 
         while (!processes.isEmpty() || !readyQueue.isEmpty()) {
@@ -53,6 +53,7 @@ public class FCAIScheduler implements Scheduler {
                 }
             }
 
+            // Skip to next time unit if no processes are ready to execute
             if (readyQueue.isEmpty()) {
                 currentTime++;
                 continue;
@@ -64,7 +65,7 @@ public class FCAIScheduler implements Scheduler {
             readyQueue = new LinkedList<>(sortedQueue);
 
             Process currentProcess = readyQueue.poll();
-            initializeQuantum(currentProcess);
+            initializeQuantum(currentProcess); // Ensure quantum is initialized
 
             int quantum40Percent = (int) Math.ceil(currentProcess.quantum * 0.4);
             int executionTime = Math.min(quantum40Percent, currentProcess.remainingTime);
@@ -72,20 +73,23 @@ public class FCAIScheduler implements Scheduler {
             currentProcess.remainingTime -= executionTime;
             currentTime += executionTime;
 
-            executionOrder.add(currentProcess.name);
+            executionOrder.add(currentProcess.name); // Record execution order
+
+            // Update quantum history (now safe to access)
+            quantumHistory.get(currentProcess.name).add(currentProcess.quantum);
 
             if (currentProcess.remainingTime > 0) {
-                currentProcess.quantum += 2;
-                quantumHistory.get(currentProcess.name).add(currentProcess.quantum);
-                readyQueue.offer(currentProcess);
+                currentProcess.quantum += 2; // Increase quantum by 2 for the next round
+                readyQueue.offer(currentProcess); // Re-add process to queue
             } else {
-                currentProcess.completionTime = currentTime;
-                currentProcess.turnaroundTime = currentProcess.completionTime - currentProcess.arrivalTime;
-                currentProcess.waitingTime = currentProcess.turnaroundTime - currentProcess.burstTime;
-                currentProcess.isCompleted = true;
+                currentProcess.completionTime = currentTime; // Set completion time
+                currentProcess.turnaroundTime = currentProcess.completionTime - currentProcess.arrivalTime; // Calculate turnaround time
+                currentProcess.waitingTime = currentProcess.turnaroundTime - currentProcess.burstTime; // Calculate waiting time
+                currentProcess.isCompleted = true; // Mark as completed
             }
         }
     }
+
 
     @Override
     public void Display() {

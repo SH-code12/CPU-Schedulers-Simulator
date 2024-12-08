@@ -7,12 +7,11 @@
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI worked successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/FCAIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/FCAIScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GUIScheduler">
+  <component name="RunManager">
     <configuration name="GUIScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUIScheduler" />
       <module name="CPU" />

@@ -22,7 +22,9 @@ public class Main {
             int burstTime = scanner.nextInt();
             System.out.print("Enter Priority of Process " +  (i + 1) + " (Low number has high Priority) " + ": ");
             int priority = scanner.nextInt();
-            processes.add(new Process(name, arrivalTime, burstTime, priority));
+            System.out.print("Enter Quantum of Process " +  (i + 1)  + ": ");
+            int Quantum = scanner.nextInt();
+            processes.add(new Process(name, arrivalTime, burstTime, priority , Quantum));
         }
 
         System.out.println("Choose Scheduling Algorithm:\n"
