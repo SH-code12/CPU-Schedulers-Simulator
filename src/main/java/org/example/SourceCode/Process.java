@@ -13,7 +13,7 @@ public class Process {
     int remainingTime;
     int completionTime = 0;
     int quantum = 0;
-    double fcaiFactor = 0.0;
+    int  fcaiFactor = 0;
     boolean isCompleted = false;
     int agingFactor = 0;
 
@@ -32,6 +32,7 @@ public class Process {
         this.remainingTime = 0;
     }
 
+
     public void setname(String n){
         this.name = n;
     }
@@ -44,8 +45,5 @@ public class Process {
     public void setPriority(int pr){
         this.priority= pr;
     }
-        public void calculateFCAIFactor(double V1, double V2) {
-            fcaiFactor = (10 - priority) + (arrivalTime / V1) + (remainingTime / V2);
-        }
 
 }

@@ -63,7 +63,6 @@ public class SJFScheduler implements Scheduler {
                 executionOrder.add("Idle");
             }
         }
-
     }
 
     // Method to print results for each process
