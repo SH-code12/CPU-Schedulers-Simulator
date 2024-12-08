@@ -3,62 +3,63 @@ package org.example.SourceCode;
 import java.util.*;
 
 public class SJFScheduler implements Scheduler {
-
     private List<Process> processes;
     public List<String> executionOrder;
+    private int contextSwitchTime;
 
-    public SJFScheduler(List<Process> processes) {
+
+    public SJFScheduler(List<Process> processes, int  contextSwitchTime) {
         this.processes = processes;
         this.executionOrder = new ArrayList<>();
+        this.contextSwitchTime = contextSwitchTime;
     }
 
     // Method to schedule processes using SJF with aging
     @Override
     public void schedule() {
-        processes.sort(Comparator.comparingInt(p -> p.arrivalTime));
         int currentTime = 0;
-        PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(p -> p.burstTime));
-        // To track processes that have arrived
-        int index = 0;
+        int completedProcesses = 0;
+        while (completedProcesses < processes.size()) {
+            Process nextProcess = null;
 
-        while (!readyQueue.isEmpty() || index < processes.size()) {
-            // Add all processes that have arrived by currentTime to the readyQueue
-            while (index < processes.size() && processes.get(index).arrivalTime <= currentTime) {
-                readyQueue.add(processes.get(index));
-                index++;
+            for (Process process : processes) {
+                if (!process.isCompleted && process.arrivalTime <= currentTime) {
+                    int effectivePriority = process.burstTime - process.agingFactor; // Adjust based on aging
+                    if (nextProcess == null || effectivePriority < (nextProcess.burstTime - nextProcess.agingFactor) ||
+                            (effectivePriority == (nextProcess.burstTime - nextProcess.agingFactor) && process.arrivalTime < nextProcess.arrivalTime)) {
+                        nextProcess = process;
+                    }
+                }
             }
 
-            // If the ready queue is empty, move the current time to the next process's arrival time
-            if (readyQueue.isEmpty()) {
-                currentTime = processes.get(index).arrivalTime;
-                continue;
+            if (nextProcess != null) {
+                // Simulate context switching
+                if (!executionOrder.isEmpty()){
+                    currentTime += contextSwitchTime;
+                    executionOrder.add("context Switch ");
+                }
+
+                // Execute the next process
+                executionOrder.add(nextProcess.name);
+                currentTime += nextProcess.burstTime;
+                nextProcess.completionTime = currentTime;
+                nextProcess.turnaroundTime = nextProcess.completionTime - nextProcess.arrivalTime;
+                nextProcess.waitingTime = nextProcess.turnaroundTime - nextProcess.burstTime;
+                nextProcess.isCompleted = true;
+                completedProcesses++;
+
+                // Reset aging factor for all other processes
+                for (Process process : processes) {
+                    if (!process.isCompleted && process.arrivalTime <= currentTime) {
+                        // Increase aging factor for waiting processes
+                        process.agingFactor += 1;
+                    }
+                }
+            } else {
+                // If no process is ready, increment time
+                currentTime++;
+                executionOrder.add("Idle");
             }
-
-            // Pick the process with the shortest burst time
-            Process currentProcess = readyQueue.poll();
-
-            // Execute the selected process
-            int startTime = Math.max(currentTime, currentProcess.arrivalTime);
-            currentProcess.waitingTime = startTime - currentProcess.arrivalTime;
-            currentProcess.turnaroundTime = currentProcess.waitingTime + currentProcess.burstTime;
-            currentTime = startTime + currentProcess.burstTime;
-
-            // Record the execution order
-            for (int i = 0; i < currentProcess.burstTime; i++) {
-                executionOrder.add(currentProcess.name);
-            }
-
-            // Apply aging to remaining processes in the readyQueue
-            List<Process> agedProcesses = new ArrayList<>();
-            while (!readyQueue.isEmpty()) {
-                Process p = readyQueue.poll();
-                // Increase the priority of the process that has been in the ready queue
-                // Aging: Reduce burst time by 1, minimum burst time is 1
-                p.burstTime = Math.max(1, p.burstTime - 1);
-                agedProcesses.add(p);
-            }
-            // Re-add aged processes to the ready queue
-            readyQueue.addAll(agedProcesses);
         }
     }
 
@@ -72,9 +73,14 @@ public class SJFScheduler implements Scheduler {
         for (Process p : processes) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + "\nTurnaround Time = " + p.turnaroundTime);
+            System.out.println(p.name + ": Waiting Time = " + p.waitingTime
+                    + ", Turnaround Time = " + p.turnaroundTime);
         }
+        double avgWaitingTime = totalWaitingTime / processes.size();
+        double avgTurnaroundTime = totalTurnaroundTime / processes.size();
 
+        System.out.println("Average Waiting Time: " + avgWaitingTime
+                + ", Average Turnaround Time: " + avgTurnaroundTime);
         System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
 

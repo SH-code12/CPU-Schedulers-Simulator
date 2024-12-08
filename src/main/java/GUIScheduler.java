@@ -67,7 +67,7 @@ public class GUIScheduler extends JFrame {
         }
         else if(comboBox1.getSelectedIndex()==1){
 // Shortest job first
-            SJFScheduler proces2 = new SJFScheduler(li);
+            SJFScheduler proces2 = new SJFScheduler(li,Integer.parseInt(textField3.getText()));
             proces2.schedule();
 
 

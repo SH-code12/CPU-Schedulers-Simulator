@@ -47,6 +47,8 @@ public class SRTFScheduler implements Scheduler {
             // context switching
             if (lastExcuted != null && !lastExcuted.equals(currentProcess)) {
                 currentTime += contextSwitchTime;
+                executionOrder.add("Context Switch");
+
             }
 
             // Execute the current process for 1 time unit
