@@ -3,11 +3,9 @@ package org.example.SourceCode;
 import java.util.*;
 
 public class SJFScheduler implements Scheduler {
-
     private List<Process> processes;
-    private List<String> executionOrder;
+    public List<String> executionOrder;
     private int contextSwitchTime;
-
 
 
     public SJFScheduler(List<Process> processes, int  contextSwitchTime) {
@@ -83,5 +81,8 @@ public class SJFScheduler implements Scheduler {
 
         System.out.println("Average Waiting Time: " + avgWaitingTime
                 + ", Average Turnaround Time: " + avgTurnaroundTime);
+        System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
+        System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
+
     }
 }

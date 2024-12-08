@@ -3,7 +3,7 @@ import java.util.*;
 
 public class NonPreemptivePriorityScheduler implements Scheduler {
     private List<Process> processes;
-    private List<String> executionOrder;
+    public List<String> executionOrder;
     // Keep track of completed processes
     private List<Process> completedProcesses;
     // Preserve the original list for calculation

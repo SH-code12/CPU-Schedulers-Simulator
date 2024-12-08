@@ -1,16 +1,19 @@
 package org.example.SourceCode;
 
+
+import java.awt.*;
+
 public class Process {
 
     public String name;
     // for GUI
-    String color;
+    public  Color color;
     int arrivalTime;
     int burstTime;
     int priority;
     int waitingTime = 0;
     int turnaroundTime = 0;
-    int remainingTime;
+    public int remainingTime;
     int completionTime = 0;
     int quantum = 0;
     int  fcaiFactor = 0;
