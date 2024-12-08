@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI worked successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAIScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
->>>>>>> 822667124175d57b24adbd3b35099eb4e3d30f73
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

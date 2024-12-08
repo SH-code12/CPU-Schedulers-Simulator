@@ -97,14 +97,11 @@ public class FCAIScheduler implements Scheduler {
         for (Process p : processes) {
             totalWaitingTime += p.waitingTime;
             totalTurnaroundTime += p.turnaroundTime;
-            System.out.println(p.name + ": Waiting Time = " + p.waitingTime
-                    + ", Turnaround Time = " + p.turnaroundTime);
+            System.out.println(p.name + ": Waiting Time = " + p.waitingTime + ", Turnaround Time = " + p.turnaroundTime);
         }
-        double avgWaitingTime = totalWaitingTime / processes.size();
-        double avgTurnaroundTime = totalTurnaroundTime / processes.size();
 
-        System.out.println("Average Waiting Time: " + avgWaitingTime
-                + ", Average Turnaround Time: " + avgTurnaroundTime);
+        System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
+        System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
 
         System.out.println("\nQuantum Update History:");
         for (Map.Entry<String, List<Integer>> entry : quantumHistory.entrySet()) {
