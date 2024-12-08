@@ -7,12 +7,12 @@
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI input forms done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +124,7 @@
       <workItem from="1733182437059" duration="13640000" />
       <workItem from="1733319906894" duration="2962000" />
       <workItem from="1733381637706" duration="20966000" />
-      <workItem from="1733600358427" duration="8419000" />
+      <workItem from="1733600358427" duration="17829000" />
     </task>
     <task id="LOCAL-00001" summary="gui starts">
       <option name="closed" value="true" />

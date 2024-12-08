@@ -14,6 +14,8 @@ public class Process {
     int completionTime = 0;
     int quantum = 0;
     double fcaiFactor = 0.0;
+    boolean isCompleted = false;
+    int agingFactor = 0;
 
     public Process(String name, int arrivalTime, int burstTime, int priority) {
         this.name = name;

@@ -39,7 +39,7 @@ public class Main {
                 PriorityScheduler.Display();
                 break;
             case 2:
-                Scheduler SJFScheduler = new SJFScheduler(processes);
+                Scheduler SJFScheduler = new SJFScheduler(processes, contextSwitchTime);
                 SJFScheduler.schedule();
                 SJFScheduler.Display();
 
