@@ -14,6 +14,7 @@ public class Process {
     int waitingTime = 0;
     int turnaroundTime = 0;
     int remainingTime;
+    int completionTime = 0;
     int quantum = 0;
     double fcaiFactor = 0.0;
 
@@ -23,7 +24,8 @@ public class Process {
         this.burstTime = burstTime;
         this.priority = priority;
         this.remainingTime = burstTime;
-    }   public Process() {
+    }
+    public Process() {
         this.name = "";
         this.arrivalTime = 0;
         this.burstTime = 0;

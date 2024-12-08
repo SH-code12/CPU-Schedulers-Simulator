@@ -10,6 +10,9 @@ public class Main {
         System.out.print("Enter number of processes: ");
         int numProcesses = scanner.nextInt();
 
+        System.out.print("Enter the context switching time:");
+        int contextSwitchTime = scanner.nextInt();
+
         for (int i = 0; i < numProcesses; i++) {
             System.out.print("Enter Name of Process " + (i + 1) + ": ");
             String name = scanner.next();
@@ -27,11 +30,11 @@ public class Main {
                 + "2. Non-Preemptive SJF Scheduling\n"
                 + "3. SRTF(Preemptive SJF) Scheduling\n"
                 + "4. FCAI Scheduling\n"
-                + "5. Exit\n");
+                + "5. Exit");
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                Scheduler PriorityScheduler = new NonPreemptivePriorityScheduler(processes);
+                Scheduler PriorityScheduler = new NonPreemptivePriorityScheduler(processes , contextSwitchTime);
                 PriorityScheduler.schedule();
                 System.out.println(PriorityScheduler.Display());
                 break;
@@ -42,7 +45,7 @@ public class Main {
 
                 break;
             case 3:
-                Scheduler SRTFScheduler = new SRTFScheduler(processes);
+                Scheduler SRTFScheduler = new SRTFScheduler(processes , contextSwitchTime);
                 SRTFScheduler.schedule();
                 SRTFScheduler.Display();
                 break;
