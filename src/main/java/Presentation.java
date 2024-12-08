@@ -25,6 +25,7 @@ public class Presentation extends JDialog {
 
         // Add each process with its color
         for (String process : processes) {
+            if(process.equals("Idle")||process.equals("Context Switch"))continue;
             JPanel color = new JPanel();
             color.setLayout(new FlowLayout(FlowLayout.LEFT)); // Horizontal layout for label + color box
 

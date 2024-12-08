@@ -5,7 +5,7 @@ public interface Scheduler {
 
     void schedule();
 
-    String Display();
+    void Display();
 
 
 }

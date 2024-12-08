@@ -71,7 +71,7 @@ public class FCAIScheduler implements Scheduler {
     }
 
     @Override
-    public String Display() {
+    public void Display() {
         System.out.println("Execution Order: " + String.join(" -> ", executionOrder));
         double totalWaitingTime = 0;
         double totalTurnaroundTime = 0;
@@ -84,6 +84,5 @@ public class FCAIScheduler implements Scheduler {
 
         System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
-        return "";
     }
 }

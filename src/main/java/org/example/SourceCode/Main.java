@@ -36,7 +36,7 @@ public class Main {
             case 1:
                 Scheduler PriorityScheduler = new NonPreemptivePriorityScheduler(processes , contextSwitchTime);
                 PriorityScheduler.schedule();
-                System.out.println(PriorityScheduler.Display());
+                PriorityScheduler.Display();
                 break;
             case 2:
                 Scheduler SJFScheduler = new SJFScheduler(processes);

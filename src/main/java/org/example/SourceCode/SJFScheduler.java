@@ -5,7 +5,7 @@ import java.util.*;
 public class SJFScheduler implements Scheduler {
 
     private List<Process> processes;
-    private List<String> executionOrder;
+    public List<String> executionOrder;
 
     public SJFScheduler(List<Process> processes) {
         this.processes = processes;
@@ -64,7 +64,7 @@ public class SJFScheduler implements Scheduler {
 
     // Method to print results for each process
     @Override
-    public String Display() {
+    public void Display() {
         System.out.println("Execution Order: " + String.join(" -> ", executionOrder));
         double totalWaitingTime = 0;
         double totalTurnaroundTime = 0;
@@ -77,6 +77,6 @@ public class SJFScheduler implements Scheduler {
 
         System.out.println("Average Waiting Time: " + (totalWaitingTime / processes.size()));
         System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / processes.size()));
-        return "";
+
     }
 }

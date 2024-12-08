@@ -57,7 +57,7 @@ public class GUIScheduler extends JFrame {
         System.out.println("run arrived");
         if(comboBox1.getSelectedIndex()==0){
 
-            NonPreemptivePriorityScheduler proces1 = new NonPreemptivePriorityScheduler(li);
+            NonPreemptivePriorityScheduler proces1 = new NonPreemptivePriorityScheduler(li,Integer.parseInt(textField3.getText()));
             proces1.schedule();
 
             System.out.println("schdule arrived ");
@@ -67,12 +67,27 @@ public class GUIScheduler extends JFrame {
 
         }
         else if(comboBox1.getSelectedIndex()==1){
+// Shortest job first
+            SJFScheduler proces2 = new SJFScheduler(li);
+            proces2.schedule();
+
+
+            Presentation Mypresesntation = new Presentation(proces2.executionOrder,this);
+            Mypresesntation.setVisible(true);
 
         }
         else if(comboBox1.getSelectedIndex()==2){
+// shortest remaining time first
+            SRTFScheduler proces3 = new SRTFScheduler(li,Integer.parseInt(textField3.getText()));
+            proces3.schedule();
 
+
+            Presentation Mypresesntation = new Presentation(proces3.executionOrder,this);
+            Mypresesntation.setVisible(true);
         }
         else{
+// fcai scheduleing
+
 
         }
     }

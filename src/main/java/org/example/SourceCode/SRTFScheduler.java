@@ -6,7 +6,7 @@ import java.util.*;
 public class SRTFScheduler implements Scheduler {
 
     private List<Process> processes;
-    private List<String> executionOrder;
+    public List<String> executionOrder;
     private int contextSwitchTime;
 
 
