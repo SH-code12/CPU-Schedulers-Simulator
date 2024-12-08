@@ -7,11 +7,9 @@
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="GUI worked successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/Process.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUIScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Presentation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Presentation$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Presentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Presentation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733620357394</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GUI worked successfully">
+      <option name="closed" value="true" />
+      <created>1733621604337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733621604337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

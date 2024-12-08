@@ -47,6 +47,7 @@ public class Processform extends JFrame {
                     g.mapOfColors.put(p.name,p.color);
                     p.setArrivalTime(Integer.parseInt(arriveTime.getText()));
                     p.setBurstTime(Integer.parseInt(burstTime.getText()));
+                    p.remainingTime = Integer.parseInt(burstTime.getText());
                     p.setPriority(Integer.parseInt(PriorityNumber.getText()));
                     li.add(p);
                     if (index != max) {

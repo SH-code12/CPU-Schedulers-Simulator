@@ -75,15 +75,15 @@ public class GUIScheduler extends JFrame {
             Mypresesntation.setVisible(true);
 
         }
-        else if(comboBox1.getSelectedIndex()==2){
+        else if(comboBox1.getSelectedIndex()==2) {
 // shortest remaining time first
             System.out.println("schdule arrived ");
 
-            SRTFScheduler proces3 = new SRTFScheduler(li,Integer.parseInt(textField3.getText()));
+
+            SRTFScheduler proces3 = new SRTFScheduler(li, Integer.parseInt(textField3.getText()));
             proces3.schedule();
 
-for(String s: proces3.executionOrder)System.out.println(s+" ");
-            Presentation Mypresesntation = new Presentation(proces3.executionOrder,this);
+            Presentation Mypresesntation = new Presentation(proces3.executionOrder, this);
             Mypresesntation.setVisible(true);
         }
         else{

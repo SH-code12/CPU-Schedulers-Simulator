@@ -13,7 +13,7 @@ public class Process {
     int priority;
     int waitingTime = 0;
     int turnaroundTime = 0;
-    int remainingTime;
+    public int remainingTime;
     int completionTime = 0;
     int quantum = 0;
     double fcaiFactor = 0.0;
