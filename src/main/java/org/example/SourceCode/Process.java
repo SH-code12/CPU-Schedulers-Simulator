@@ -20,12 +20,21 @@ public class Process {
     boolean isCompleted = false;
     int agingFactor = 0;
 
-    public Process(String name, int arrivalTime, int burstTime, int priority , int quantum) {
+    public Process(String name, int arrivalTime, int burstTime, int priority , int quantum , int fcaiFactor) {
         this.name = name;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
         this.priority = priority;
         this.quantum = quantum;
+        this.fcaiFactor = fcaiFactor;
+        this.remainingTime = burstTime;
+    }
+    public Process(String name, int arrivalTime, int burstTime, int priority) {
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.burstTime = burstTime;
+        this.priority = priority;
+
         this.remainingTime = burstTime;
     }
     public Process() {
