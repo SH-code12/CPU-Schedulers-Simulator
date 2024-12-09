@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="first 3 algorithems and GUI works successfully">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcaiform.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcaiform.java" afterDir="false" />
+    <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="All done ISA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/fcai_process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/fcai_process.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,8 @@
       <workItem from="1733600358427" duration="18950000" />
       <workItem from="1733621051748" duration="2026000" />
       <workItem from="1733668799299" duration="5326000" />
-      <workItem from="1733687930142" duration="4864000" />
+      <workItem from="1733687930142" duration="5944000" />
+      <workItem from="1733730234096" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="gui starts">
       <option name="closed" value="true" />
@@ -181,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733622348476</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All done ISA">
+      <option name="closed" value="true" />
+      <created>1733693182856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733693182856</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +196,7 @@
     <MESSAGE value="GUI input forms done" />
     <MESSAGE value="GUI worked successfully" />
     <MESSAGE value="first 3 algorithems and GUI works successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="first 3 algorithems and GUI works successfully" />
+    <MESSAGE value="All done ISA" />
+    <option name="LAST_COMMIT_MESSAGE" value="All done ISA" />
   </component>
 </project>

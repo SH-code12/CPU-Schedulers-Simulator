@@ -17,7 +17,6 @@ public class GUIScheduler extends JFrame {
     Map<String, Color> mapOfColors = new HashMap<>();
     private JButton startButton;
     private JTextField textField1;
-    private JTextField textField2;
     private JTextField textField3;
 
     public GUIScheduler(){
