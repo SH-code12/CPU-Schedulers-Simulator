@@ -24,7 +24,8 @@ public class SJFScheduler implements Scheduler {
 
             for (Process process : processes) {
                 if (!process.isCompleted && process.arrivalTime <= currentTime) {
-                    int effectivePriority = process.burstTime - process.agingFactor; // Adjust based on aging
+                    // based on aging
+                    int effectivePriority = process.burstTime - process.agingFactor;
                     if (nextProcess == null || effectivePriority < (nextProcess.burstTime - nextProcess.agingFactor) ||
                             (effectivePriority == (nextProcess.burstTime - nextProcess.agingFactor) && process.arrivalTime < nextProcess.arrivalTime)) {
                         nextProcess = process;
@@ -57,8 +58,8 @@ public class SJFScheduler implements Scheduler {
                 }
             } else {
                 // If no process is ready, increment time
-                currentTime++;
                 executionOrder.add("Idle");
+                currentTime++;
             }
         }
     }

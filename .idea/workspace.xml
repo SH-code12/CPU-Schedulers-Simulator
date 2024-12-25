@@ -5,14 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbd6bf6f-b237-4f19-88be-7ba87fd44475" name="Changes" comment="first 3 algorithems and GUI works successfully">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcaiform.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcaiform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/GUIScheduler$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/GUIScheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Presentation$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Presentation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Processform$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Processform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/fcaiform$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/fcaiform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/FCAI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/NonPreemptivePriorityScheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Process.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SJFScheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/SRTFScheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/Scheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/SourceCode/fcai_process.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Processform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Processform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/FCAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/fcai_process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/fcai_process.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/NonPreemptivePriorityScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SJFScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SourceCode/SRTFScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +81,7 @@
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;417&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/SHaHD/3th_first term/Operating_System/Sceduling&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -119,7 +144,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -140,6 +166,10 @@
       <workItem from="1733621051748" duration="2026000" />
       <workItem from="1733668799299" duration="5326000" />
       <workItem from="1733687930142" duration="4864000" />
+      <workItem from="1733711317414" duration="75000" />
+      <workItem from="1734210383889" duration="52000" />
+      <workItem from="1735068556865" duration="858000" />
+      <workItem from="1735131564638" duration="3163000" />
     </task>
     <task id="LOCAL-00001" summary="gui starts">
       <option name="closed" value="true" />

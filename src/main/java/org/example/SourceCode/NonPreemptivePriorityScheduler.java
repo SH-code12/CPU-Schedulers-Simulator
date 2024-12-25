@@ -24,14 +24,16 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
     // Method to schedule processes using Non-Preemptive Priority Scheduling
     @Override
     public void schedule() {
-        processes.sort(Comparator.comparingInt(p -> p.arrivalTime)); // Sort by arrival time
+        // Sort by arrival time
+        processes.sort(Comparator.comparingInt(p -> p.arrivalTime));
         int currentTime = 0;
 
         while (!processes.isEmpty()) {
             // Aging: Reduce priority (increase priority value numerically) for all waiting processes
             for (Process p : processes) {
                 if (p.arrivalTime <= currentTime && p.remainingTime > 0) {
-                    p.priority = Math.max(1, p.priority - 1); // Lower priority value = higher priority
+                    // Lower priority value = higher priority
+                    p.priority = Math.max(1, p.priority - 1);
                 }
             }
 
@@ -43,7 +45,8 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
                     .orElse(null);
 
             if (nextProcess != null) {
-                currentTime = Math.max(currentTime, nextProcess.arrivalTime); // Wait if no process has arrived
+                // Wait if no process has arrived
+                currentTime = Math.max(currentTime, nextProcess.arrivalTime);
 
                 // Context Switching
                 if (!executionOrder.isEmpty()) {
@@ -58,17 +61,18 @@ public class NonPreemptivePriorityScheduler implements Scheduler {
 
                 // Update process times
                 currentTime += nextProcess.burstTime;
-                nextProcess.completionTime = currentTime; // Completion time
-                nextProcess.turnaroundTime = nextProcess.completionTime - nextProcess.arrivalTime; // Turnaround Time
-                nextProcess.waitingTime = nextProcess.turnaroundTime - nextProcess.burstTime; // Waiting Time
+                nextProcess.completionTime = currentTime;
+                nextProcess.turnaroundTime = nextProcess.completionTime - nextProcess.arrivalTime;
+                nextProcess.waitingTime = nextProcess.turnaroundTime - nextProcess.burstTime;
 
                 // Add to completed processes and remove from list
                 completedProcesses.add(nextProcess);
                 processes.remove(nextProcess);
             } else {
                 // If no process is ready, increment time
-                currentTime++;
                 executionOrder.add("Idle");
+                currentTime++;
+
             }
         }
     }

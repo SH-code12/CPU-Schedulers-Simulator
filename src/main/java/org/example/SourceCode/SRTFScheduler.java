@@ -28,7 +28,7 @@ public class SRTFScheduler implements Scheduler {
         Process lastExcuted = null;
 
         while (completed < processes.size()) {
-            // Add processes that have arrived by currentTime to the readyQueue
+            // Add processes that have arrived to the readyQueue
             for (Process p : processes) {
                 if (p.arrivalTime <= currentTime && !readyQueue.contains(p) && p.remainingTime > 0) {
                     readyQueue.add(p);
@@ -37,6 +37,7 @@ public class SRTFScheduler implements Scheduler {
 
             // If no process is ready, increment time
             if (readyQueue.isEmpty()) {
+                executionOrder.add("Idle");
                 currentTime++;
                 continue;
             }

@@ -167,6 +167,9 @@ public class  FCAI {
         System.out.println("Average Turnaround Time: " + avgTurnaroundTime);
         System.out.println("\nQuantum Time History:");
         quantumHistory.forEach(System.out::println);
+        if(quantumHistory.isEmpty()){
+            System.out.println("No Quantum Time History");
+        }
 
     }
 }
